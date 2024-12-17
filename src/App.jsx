@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header } from './components/Header'
+import { Landing } from './pages/Landing'
 import { Home } from './pages/Home'
 import { Catalog } from './pages/Catalog'
 import { Cart } from './pages/Cart'
@@ -11,7 +12,8 @@ function App() {
       <Header />
       <main className='px-20 py-10'>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Landing />} />
+          <Route path='/home' element={<Home />} />
           <Route path='/catalog' element={<Catalog />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='*' element={<NotFound />} />

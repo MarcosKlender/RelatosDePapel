@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.page-title {
+    @apply pb-10 text-4xl text-center;
+}

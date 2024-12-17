@@ -13,7 +13,7 @@ export function Header() {
                 </Link>
 
                 <div className='flex gap-5'>
-                    <Link to='/' className='hover:underline'>Inicio</Link>
+                    <Link to='/home' className='hover:underline'>Inicio</Link>
                     <Link to='/catalog' className='hover:underline'>Catálogo</Link>
                 </div>
 
