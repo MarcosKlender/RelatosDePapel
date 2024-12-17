@@ -4,6 +4,7 @@ import { Landing } from './pages/Landing'
 import { Home } from './pages/Home'
 import { Catalog } from './pages/Catalog'
 import { Cart } from './pages/Cart'
+import { BookDetail } from './pages/BookDetail'
 import { NotFound } from './pages/NotFound'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/catalog' element={<Catalog />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/books/:id' element={<BookDetail />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>
