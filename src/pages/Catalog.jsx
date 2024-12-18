@@ -1,10 +1,11 @@
 import { BookList } from "../components/BookList"
+import { books } from "../utils/Books"
 
-export function Catalog() {
+export function Catalog({ searchTerm }) {
     return (
         <>
             <h1 className="page-title">Catálogo de Libros</h1>
-            <BookList />
+            <BookList books={books} searchTerm={searchTerm} />
         </>
     )
 }

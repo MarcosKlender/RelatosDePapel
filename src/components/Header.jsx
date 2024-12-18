@@ -1,9 +1,16 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import OpenBook from '../assets/OpenBook.svg'
 import Cart from '../assets/Cart.svg'
 import '../styles/tailwind.css'
 
-export function Header() {
+export function Header({ onSearchChange }) {
+    const navigate = useNavigate();
+
+    const handleSearchChange = (value) => {
+        onSearchChange(value);
+        navigate('/catalog');
+    }
+
     return (
         <header>
             <nav className='flex items-center justify-around h-16'>
@@ -18,7 +25,12 @@ export function Header() {
                 </div>
 
                 <div className='flex items-center gap-6'>
-                    <input type="search" name="" id="" className='px-3 py-1 text-black rounded' placeholder='Buscar libros...' />
+                    <input
+                        type="search"
+                        onChange={(e) => handleSearchChange(e.target.value)}
+                        className='px-3 py-1 text-black rounded'
+                        placeholder='Buscar libros...'
+                    />
 
                     <Link to='/cart'>
                         <img src={Cart} alt="Carrito" />
