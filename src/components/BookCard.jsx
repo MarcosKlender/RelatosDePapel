@@ -13,8 +13,9 @@ export function BookCard({ book }) {
                 </div>
 
                 <div className="flex flex-col gap-1 p-4">
+                    <span className="text-emerald-400">$ {book.price}</span>
                     <h2 className="text-lg font-semibold">{book.title}</h2>
-                    <p className="text-sm opacity-90">{book.year} • {book.author}</p>
+                    <p className="text-sm opacity-90">{book.author}</p>
                 </div>
             </Link>
         </article>

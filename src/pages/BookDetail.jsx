@@ -15,7 +15,10 @@ export function BookDetail() {
             <img src={book.image} alt={`Portada del libro ${book.title}`} className='w-1/4 h-full rounded' />
 
             <aside className='flex flex-col justify-center w-full sm:w-2/4'>
-                <span className='px-2 my-2 text-sm border rounded-lg w-fit'>{book.year}</span>
+                <div className='flex items-center justify-between'>
+                    <span className='px-2 my-2 text-sm border rounded-lg w-fit'>{book.year}</span>
+                    <span className="text-2xl text-emerald-400">$ {book.price}</span>
+                </div>
                 <h1 className='text-4xl font-bold'>{book.title}</h1>
                 <h2 className='opacity-80'>Por {book.author}</h2>
 
