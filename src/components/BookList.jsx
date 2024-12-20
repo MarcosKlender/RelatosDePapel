@@ -11,7 +11,10 @@ export function BookList({ books, searchTerm }) {
                 filteredBooks.length > 0 ? (
                     filteredBooks.map(book => <BookCard key={book.id} book={book} />)
                 ) : (
-                    <p>No se encontraron libros.</p>
+                    <div className="flex flex-col items-center col-span-full">
+                        <p>No se han encontrado resultados para tu búsqueda "{searchTerm}"</p>
+                        <p>Por favor, prueba con otros términos.</p>
+                    </div>
                 )
             }
         </section>
