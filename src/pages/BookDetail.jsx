@@ -25,8 +25,8 @@ export function BookDetail() {
                 <p className='py-10'>{book.description}</p>
 
                 <div className='flex gap-4'>
-                    <Link to='/cart' className='px-4 py-2 transition duration-300 rounded bg-emerald-700 hover:bg-emerald-800'>Añadir al Carrito</Link>
-                    <Link to='/catalog' className='px-4 py-2 border rounded border-emerald-700'>Volver al Catálogo</Link>
+                    <Link to='/cart' className='px-4 py-2 transition duration-300 rounded bg-emerald-600 hover:bg-emerald-800'>Añadir al Carrito</Link>
+                    <Link to='/catalog' className='px-4 py-2 border rounded border-emerald-600'>Volver al Catálogo</Link>
                 </div>
             </aside>
         </section>
