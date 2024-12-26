@@ -9,7 +9,7 @@ export function useCart() {
 
             if (isBookInCart) {
                 return prevCart.map((item) =>
-                    item.id === book.id ? { ...item, quantity: item.quantity++ } : item
+                    item.id === book.id ? { ...item, quantity: item.quantity + 1 } : item
                 );
             }
 
