@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { books } from '../utils/Books.js';
 import { NotFound } from './NotFound.jsx';
 
-export function BookDetail() {
+export function BookDetail({ addToCart }) {
     const { id } = useParams();
     const book = books.find(book => book.id === parseInt(id));
 
@@ -25,7 +25,12 @@ export function BookDetail() {
                 <p className='py-10'>{book.description}</p>
 
                 <div className='flex gap-4'>
-                    <Link to='/cart' className='px-4 py-2 transition duration-300 rounded bg-emerald-600 hover:bg-emerald-800'>Añadir al Carrito</Link>
+                    <button
+                        onClick={() => addToCart(book)}
+                        className='px-4 py-2 transition duration-300 rounded bg-emerald-600 hover:bg-emerald-800'
+                    >
+                        Añadir al Carrito
+                    </button>
                     <Link to='/catalog' className='px-4 py-2 border rounded border-emerald-600'>Volver al Catálogo</Link>
                 </div>
             </aside>

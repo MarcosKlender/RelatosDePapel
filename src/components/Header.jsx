@@ -3,7 +3,7 @@ import OpenBook from '../assets/OpenBook.svg'
 import Cart from '../assets/Cart.svg'
 import '../styles/tailwind.css'
 
-export function Header({ onSearchChange }) {
+export function Header({ onSearchChange, cartItemCount, notification }) {
     const navigate = useNavigate();
 
     const handleSearchChange = (value) => {
@@ -32,11 +32,26 @@ export function Header({ onSearchChange }) {
                         placeholder='Buscar libros...'
                     />
 
-                    <Link to='/cart'>
+                    <Link to='/cart' className='flex'>
                         <img src={Cart} alt="Carrito" />
+                        {
+                            cartItemCount > 0 && (
+                                <span className='px-2 py-1 text-xs font-bold text-white bg-red-500 rounded-full'>
+                                    {cartItemCount}
+                                </span>
+                            )
+                        }
                     </Link>
 
                     <img src="https://avatars.githubusercontent.com/u/36539682" alt="Perfil del usuario logueado" className='h-8 rounded-full' />
+
+                    {
+                        notification && (
+                            <div className='fixed px-4 py-2 text-white transform -translate-x-1/2 bg-blue-500 rounded-full top-16 left-1/2'>
+                                {notification}
+                            </div>
+                        )
+                    }
                 </div>
             </nav>
         </header>
