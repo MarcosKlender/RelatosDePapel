@@ -7,6 +7,7 @@ import { Catalog } from './pages/Catalog'
 import { Cart } from './pages/Cart'
 import { BookDetail } from './pages/BookDetail'
 import { NotFound } from './pages/NotFound'
+import { Checkout } from './pages/Checkout'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,6 +21,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/catalog' element={<Catalog searchTerm={searchTerm} />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/checkout' element={<Checkout />} />
           <Route path='/books/:id' element={<BookDetail />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

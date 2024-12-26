@@ -36,7 +36,7 @@ export function Header({ onSearchChange }) {
                         <img src={Cart} alt="Carrito" />
                     </Link>
 
-                    <img src="https://unavatar.io/github/marcosklender" alt="Perfil del usuario logueado" className='h-8 rounded-full' />
+                    <img src="https://avatars.githubusercontent.com/u/36539682" alt="Perfil del usuario logueado" className='h-8 rounded-full' />
                 </div>
             </nav>
         </header>
