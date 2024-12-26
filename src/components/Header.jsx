@@ -13,13 +13,13 @@ export function Header({ onSearchChange, cartItemCount, notification }) {
 
     return (
         <header>
-            <nav className='flex items-center justify-around h-16'>
-                <Link to='/' className='flex items-center gap-2'>
-                    <img src={OpenBook} alt="Relatos de Papel" className='h-8' />
-                    <span>Relatos de Papel</span>
-                </Link>
+            <nav className='flex flex-col items-center justify-around h-16 m-4 sm:m-0 sm:flex-row'>
+                <div className='flex items-center gap-4 mb-4 md:gap-10 sm:mb-0'>
+                    <Link to='/' className='flex items-center gap-2'>
+                        <img src={OpenBook} alt="Relatos de Papel" className='h-8' />
+                        <span className='hover:underline'>Relatos de Papel</span>
+                    </Link>
 
-                <div className='flex gap-5'>
                     <Link to='/home' className='hover:underline'>Inicio</Link>
                     <Link to='/catalog' className='hover:underline'>Catálogo</Link>
                 </div>
