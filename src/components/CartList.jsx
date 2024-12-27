@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { CartItem } from "./CartItem";
 
-export function BookCart({ cart, removeFromCart }) {
+export function CartList({ cart, removeFromCart }) {
     const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
@@ -17,11 +18,12 @@ export function BookCart({ cart, removeFromCart }) {
                         <hr />
                         <div className="flex flex-col items-center">
                             <p className="py-4 text-sm text-center opacity-70">Los impuestos y cargos por envío se calculan en la siguiente ventana</p>
-                            <button
-                                className="w-full py-2 text-white bg-blue-500 rounded-lg sm:w-1/2"
+                            <Link
+                                to='/checkout'
+                                className="w-full py-2 text-center text-white bg-blue-500 rounded-lg sm:w-1/2"
                             >
                                 Proceder al Pago
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 ) : (

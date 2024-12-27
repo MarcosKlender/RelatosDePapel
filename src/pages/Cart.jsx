@@ -1,10 +1,10 @@
-import { BookCart } from "../components/BookCart"
+import { CartList } from "../components/CartList"
 
 export function Cart({ cart, removeFromCart }) {
     return (
         <>
             <h1 className="page-title">Mi Carrito</h1>
-            <BookCart cart={cart} removeFromCart={removeFromCart} />
+            <CartList cart={cart} removeFromCart={removeFromCart} />
         </>
     )
 }
