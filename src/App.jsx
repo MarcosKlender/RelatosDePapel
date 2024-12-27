@@ -21,50 +21,14 @@ function App() {
       future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
     >
       <Toaster richColors />
-      <Header
-        onSearchChange={setSearchTerm}
-        cartItemCount={cartItemCount}
-      />
+      <Header onSearchChange={setSearchTerm} cartItemCount={cartItemCount} />
       <main className='px-20 py-10'>
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/home' element={<Home addToCart={addToCart} />} />
-          <Route path='/catalog' element=
-            {
-              <Catalog
-                searchTerm={searchTerm}
-                addToCart={(book) => {
-                  addToCart(book);
-                  toast.success(`"${book.title}" añadido al carrito`);
-                }}
-              />
-            }
-          />
-          <Route path='/cart' element=
-            {
-              <Cart
-                cart={cart}
-                removeFromCart={(bookId) => {
-                  const removedBook = cart.find(book => book.id === bookId);
-                  removeFromCart(bookId);
-
-                  if (removedBook) {
-                    toast.error(`"${removedBook.title}" eliminado del carrito`);
-                  }
-                }}
-              />
-            }
-          />
-          <Route path='/books/:id' element=
-            {
-              <BookDetail
-                addToCart={(book) => {
-                  addToCart(book);
-                  toast.success(`"${book.title}" añadido al carrito`);
-                }}
-              />
-            }
-          />
+          <Route path='/catalog' element={<Catalog searchTerm={searchTerm} addToCart={addToCart} />} />
+          <Route path='/cart' element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
+          <Route path='/books/:id' element={<BookDetail addToCart={addToCart} />} />
           <Route path='/checkout' element={<Checkout cart={cart} clearCart={clearCart} />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

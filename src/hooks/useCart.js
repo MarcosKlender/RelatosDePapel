@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "sonner";
 
 export function useCart() {
     const [cart, setCart] = useState([]);
@@ -15,10 +16,13 @@ export function useCart() {
 
             return [...prevCart, { ...book, quantity: 1 }];
         });
+
+        toast.success(`"${book.title}" añadido al carrito`);
     };
 
     const removeFromCart = (bookId) => {
         setCart((prevCart) => prevCart.filter((item) => item.id !== bookId));
+        toast.error(`Ítem eliminado del carrito`);
     };
 
     const clearCart = () => {
