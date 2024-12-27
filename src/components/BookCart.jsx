@@ -13,12 +13,12 @@ export function BookCart({ cart, removeFromCart }) {
                                 <CartItem key={item.id} item={item} removeFromCart={removeFromCart} />
                             ))
                         }
-                        <h2 className="py-4 text-xl text-right">Total a pagar: ${totalPrice.toFixed(2)}</h2>
+                        <h2 className="py-4 text-xl text-center sm:text-right">Total a pagar: ${totalPrice.toFixed(2)}</h2>
                         <hr />
                         <div className="flex flex-col items-center">
                             <p className="py-4 text-sm text-center opacity-70">Los impuestos y cargos por envío se calculan en la siguiente ventana</p>
                             <button
-                                className="w-1/2 py-2 text-white bg-blue-500 rounded-lg"
+                                className="w-full py-2 text-white bg-blue-500 rounded-lg sm:w-1/2"
                             >
                                 Proceder al Pago
                             </button>

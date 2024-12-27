@@ -12,7 +12,7 @@ export function BookDetail({ addToCart }) {
 
     return (
         <section className='flex flex-col justify-center gap-10 sm:flex-row'>
-            <img src={book.image} alt={`Portada del libro ${book.title}`} className='w-1/4 h-full rounded' />
+            <img src={book.image} alt={`Portada del libro ${book.title}`} className='h-full rounded sm:w-1/4' />
 
             <aside className='flex flex-col justify-center w-full sm:w-2/4'>
                 <div className='flex items-center justify-between'>
@@ -24,7 +24,7 @@ export function BookDetail({ addToCart }) {
 
                 <p className='py-10'>{book.description}</p>
 
-                <div className='flex gap-4'>
+                <div className='flex flex-col gap-4 text-center sm:flex-row'>
                     <button
                         onClick={() => addToCart(book)}
                         className='px-4 py-2 transition duration-300 rounded bg-emerald-600 hover:bg-emerald-800'
