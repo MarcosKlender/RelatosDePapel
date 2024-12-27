@@ -3,7 +3,7 @@ import OpenBook from '../assets/OpenBook.svg'
 import Cart from '../assets/Cart.svg'
 import '../styles/tailwind.css'
 
-export function Header({ onSearchChange, cartItemCount, notification }) {
+export function Header({ onSearchChange, cartItemCount }) {
     const navigate = useNavigate();
 
     const handleSearchChange = (value) => {
@@ -45,14 +45,6 @@ export function Header({ onSearchChange, cartItemCount, notification }) {
                     </Link>
 
                     <img src="https://avatars.githubusercontent.com/u/36539682" alt="Perfil del usuario logueado" className='h-8 rounded-full' />
-
-                    {
-                        notification && (
-                            <div className='fixed px-4 py-2 text-white transform -translate-x-1/2 bg-blue-500 rounded-full top-16 left-1/2'>
-                                {notification}
-                            </div>
-                        )
-                    }
                 </div>
             </nav>
         </header>

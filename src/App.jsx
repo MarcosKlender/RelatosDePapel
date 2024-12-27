@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import { useCart } from './hooks/useCart'
+import { Toaster, toast } from 'sonner'
+
 import { Header } from './components/Header'
 import { Landing } from './pages/Landing'
 import { Home } from './pages/Home'
@@ -12,22 +14,16 @@ import { NotFound } from './pages/NotFound'
 
 function App() {
   const { cart, addToCart, removeFromCart, cartItemCount } = useCart();
-  const [notification, setNotification] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-
-  const showNotificaction = message => {
-    setNotification(message);
-    setTimeout(() => setNotification(''), 3000); // Clear notification after 3 seconds
-  }
 
   return (
     <BrowserRouter
       future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
     >
+      <Toaster richColors />
       <Header
         onSearchChange={setSearchTerm}
         cartItemCount={cartItemCount}
-        notification={notification}
       />
       <main className='px-20 py-10'>
         <Routes>
@@ -39,7 +35,7 @@ function App() {
                 searchTerm={searchTerm}
                 addToCart={(book) => {
                   addToCart(book);
-                  showNotificaction(`${book.title} añadido al carrito`)
+                  toast.success(`"${book.title}" añadido al carrito`);
                 }}
               />
             }
@@ -53,7 +49,7 @@ function App() {
                   removeFromCart(bookId);
 
                   if (removedBook) {
-                    showNotificaction(`${removedBook.title} eliminado del carrito`);
+                    toast.error(`"${removedBook.title}" eliminado del carrito`);
                   }
                 }}
               />
@@ -64,7 +60,7 @@ function App() {
               <BookDetail
                 addToCart={(book) => {
                   addToCart(book);
-                  showNotificaction(`${book.title} añadido al carrito`);
+                  toast.success(`"${book.title}" añadido al carrito`);
                 }}
               />
             }
