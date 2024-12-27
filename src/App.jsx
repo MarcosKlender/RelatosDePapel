@@ -28,7 +28,7 @@ function App() {
       <main className='px-20 py-10'>
         <Routes>
           <Route path='/' element={<Landing />} />
-          <Route path='/home' element={<Home />} />
+          <Route path='/home' element={<Home addToCart={addToCart} />} />
           <Route path='/catalog' element=
             {
               <Catalog
@@ -65,13 +65,7 @@ function App() {
               />
             }
           />
-          <Route path='/checkout' element={
-            <Checkout
-              cart={cart}
-              clearCart={clearCart}
-            />
-          }
-          />
+          <Route path='/checkout' element={<Checkout cart={cart} clearCart={clearCart} />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>
