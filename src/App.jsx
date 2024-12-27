@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import { useCart } from './hooks/useCart'
-import { Toaster, toast } from 'sonner'
+import { Toaster } from 'sonner'
 
 import { Header } from './components/Header'
 import { Landing } from './pages/Landing'

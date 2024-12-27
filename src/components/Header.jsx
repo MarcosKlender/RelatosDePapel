@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import OpenBook from '../assets/OpenBook.svg'
 import Cart from '../assets/Cart.svg'
 import '../styles/tailwind.css'
@@ -20,8 +20,19 @@ export function Header({ onSearchChange, cartItemCount }) {
                         <span className='hover:underline'>Relatos de Papel</span>
                     </Link>
 
-                    <Link to='/home' className='hover:underline'>Inicio</Link>
-                    <Link to='/catalog' className='hover:underline'>Catálogo</Link>
+                    <NavLink
+                        to='/home'
+                        className={({ isActive }) => isActive ? 'underline' : 'hover:underline'}
+                    >
+                        Inicio
+                    </NavLink>
+
+                    <NavLink
+                        to='/catalog'
+                        className={({ isActive }) => isActive ? 'underline' : 'hover:underline'}
+                    >
+                        Catálogo
+                    </NavLink>
                 </div>
 
                 <div className='flex items-center gap-6'>
