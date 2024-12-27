@@ -6,19 +6,12 @@ export function useCountdown(time) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCountdown(prev => {
-                if (prev <= 1) {
-                    clearInterval(timer);
-                    navigate("/home");
-                }
+        let timer;
 
-                return prev - 1;
-            });
-        }, 1000);
+        countdown > 0 ? timer = setTimeout(() => setCountdown(countdown - 1), 1000) : navigate("/home");
 
-        return () => clearInterval(timer);
-    }, [navigate]);
+        return () => clearTimeout(timer);
+    }, [countdown, navigate]);
 
     return { countdown };
 }
