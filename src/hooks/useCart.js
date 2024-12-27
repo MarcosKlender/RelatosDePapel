@@ -21,7 +21,11 @@ export function useCart() {
         setCart((prevCart) => prevCart.filter((item) => item.id !== bookId));
     };
 
+    const clearCart = () => {
+        setCart([]);
+    };
+
     const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
 
-    return { cart, addToCart, removeFromCart, cartItemCount };
+    return { cart, addToCart, removeFromCart, clearCart, cartItemCount };
 }

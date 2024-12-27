@@ -1,7 +1,7 @@
 import { CheckoutItem } from "./CheckoutItem"
 import { PaymentMethod } from "./PaymentMethod";
 
-export function CheckoutList({ cart }) {
+export function CheckoutList({ cart, clearCart }) {
     const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
@@ -18,7 +18,7 @@ export function CheckoutList({ cart }) {
                             <p>Total</p>
                             <span>${totalPrice.toFixed(2)}</span>
                         </div>
-                        <PaymentMethod />
+                        <PaymentMethod clearCart={clearCart} />
                     </div>
                 ) : (
                     <div className="text-center">

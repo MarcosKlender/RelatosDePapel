@@ -27,11 +27,11 @@ export function BookDetail({ addToCart }) {
                 <div className='flex flex-col gap-4 text-center sm:flex-row'>
                     <button
                         onClick={() => addToCart(book)}
-                        className='px-4 py-2 transition duration-300 rounded bg-emerald-600 hover:bg-emerald-800'
+                        className='w-full px-4 py-2 transition duration-300 rounded bg-emerald-600 hover:bg-emerald-800'
                     >
                         Añadir al Carrito
                     </button>
-                    <Link to='/catalog' className='px-4 py-2 border rounded border-emerald-600'>Volver al Catálogo</Link>
+                    <Link to='/catalog' className='w-full px-4 py-2 border rounded border-emerald-600'>Volver al Catálogo</Link>
                 </div>
             </aside>
         </section>

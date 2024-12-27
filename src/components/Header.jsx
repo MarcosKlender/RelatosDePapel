@@ -44,7 +44,9 @@ export function Header({ onSearchChange, cartItemCount }) {
                         }
                     </Link>
 
-                    <img src="https://avatars.githubusercontent.com/u/36539682" alt="Perfil del usuario logueado" className='h-8 rounded-full' />
+                    <a href="https://github.com/MarcosKlender/RelatosDePapel" target='_blank'>
+                        <img src="https://avatars.githubusercontent.com/u/36539682" alt="Perfil del usuario logueado" className='h-8 rounded-full' />
+                    </a>
                 </div>
             </nav>
         </header>

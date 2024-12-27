@@ -16,7 +16,7 @@ export function CartItem({ item, removeFromCart }) {
                 >
                     Eliminar
                 </button>
-                <p className="text-xl text-emerald-400">${item.price.toFixed(2)}</p>
+                <p className="text-xl text-emerald-400">${item.price.toFixed(2) * item.quantity}</p>
             </div>
         </div>
     )

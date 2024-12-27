@@ -13,7 +13,7 @@ import { Checkout } from './pages/Checkout'
 import { NotFound } from './pages/NotFound'
 
 function App() {
-  const { cart, addToCart, removeFromCart, cartItemCount } = useCart();
+  const { cart, addToCart, removeFromCart, clearCart, cartItemCount } = useCart();
   const [searchTerm, setSearchTerm] = useState('');
 
   return (
@@ -68,6 +68,7 @@ function App() {
           <Route path='/checkout' element={
             <Checkout
               cart={cart}
+              clearCart={clearCart}
             />
           }
           />
