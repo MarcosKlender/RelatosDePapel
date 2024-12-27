@@ -26,7 +26,8 @@ export function Header({ onSearchChange, cartItemCount, notification }) {
 
                 <div className='flex items-center gap-6'>
                     <input
-                        type="search"
+                        type='search'
+                        id='search'
                         onChange={(e) => handleSearchChange(e.target.value)}
                         className='px-3 py-1 text-black rounded'
                         placeholder='Buscar libros...'
