@@ -25,7 +25,6 @@
     <li><a href="#acerca-del-proyecto">Acerca del Proyecto</a></li>
     <li><a href="#flujo-de-la-búsqueda">Flujo de la Búsqueda</a></li>
     <li><a href="#flujo-del-carrito">Flujo del Carrito</a></li>
-    <li><a href="#licencia">Licencia</a></li>
   </ol>
 
 
@@ -35,7 +34,7 @@ Proyecto transversal llamado "Relatos de Papel" de la Maestría de Ingeniería d
 
 Puedes acceder a la videomemoria a través de [este enlace](https://www.youtube.com/watch?v=vzVQBS3oXj0).
 
-<p align="right"><a href="#readme-top">Back to top ⬆️</a></p>
+<p align="right"><a href="#readme-top">Volver al índice ⬆️</a></p>
 
 
 ## Flujo de la Búsqueda
@@ -51,7 +50,7 @@ Catalog pasa el searchTerm a BookList
 BookList filtra libros y muestra resultados
 ```
 
-<p align="right"><a href="#readme-top">Back to top ⬆️</a></p>
+<p align="right"><a href="#readme-top">Volver al índice ⬆️</a></p>
 
 
 ## Flujo del Carrito
@@ -76,11 +75,4 @@ Actualiza el carrito
 Muestra cantidad total (cartItemCount)
 ```
 
-<p align="right"><a href="#readme-top">Back to top ⬆️</a></p>
-
-
-## Licencia
-
-Distributed under the MIT License.
-
-<p align="right"><a href="#readme-top">Back to top ⬆️</a></p>
+<p align="right"><a href="#readme-top">Volver al índice ⬆️</a></p>
